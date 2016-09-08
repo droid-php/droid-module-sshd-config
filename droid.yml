@@ -1,0 +1,23 @@
+project:
+    name: "droid/sshd-config"
+    description: "Configure SSH Service"
+
+variables:
+    sshd_config: []
+
+tasks:
+    -
+      name: "Configure SSH Service"
+      command: "fs:setline"
+      arguments:
+          file: "/etc/ssh/sshd_config"
+          option-name: "{{{ item.0 }}}"
+          option-value: "{{{ item.1 }}}"
+      with_items: sshd_config
+      trigger: "Restart SSH Service"
+triggers:
+    -
+      name: "Restart SSH Service"
+      command: "shell:exec"
+      arguments:
+          command-line: "service ssh restart"
