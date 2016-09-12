@@ -9,6 +9,7 @@ tasks:
     -
       name: "Configure SSH Service"
       command: "fs:setline"
+      sudo: true
       arguments:
           file: "/etc/ssh/sshd_config"
           option-name: "{{{ item.0 }}}"
@@ -19,5 +20,6 @@ triggers:
     -
       name: "Restart SSH Service"
       command: "shell:exec"
+      sudo: true
       arguments:
           command-line: "service ssh restart"
