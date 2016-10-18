@@ -1,6 +1,4 @@
-project:
-    name: "droid/sshd-config"
-    description: "Configure SSH Service"
+description: "Configure SSH Service"
 
 variables:
     sshd_config: []

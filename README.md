@@ -1,4 +1,4 @@
-# Droid Module: droid/sshd-config
+# Droid Module: sshd-config
 
 Modify `/etc/ssh/sshd_config`. For more information on Droid, please see
 [droidphp.com](http://droidphp.com).
