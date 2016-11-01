@@ -1,6 +1,7 @@
 description: "Configure SSH Service"
 
 variables:
+    use_legacy_templating: true
     sshd_config: []
 
 tasks:
